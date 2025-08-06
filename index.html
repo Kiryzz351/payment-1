@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiryzz Store - Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="background"></div>
+    
+    <div class="loading-container">
+        <div class="loading-animation">
+            <div class="logo">
+                <img src="https://via.placeholder.com/150" alt="Kiryzz Store Logo" id="store-logo">
+            </div>
+            <div class="loading-text">Kiryzz Store</div>
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="payment-container" style="display: none;">
+        <div class="header">
+            <img src="https://via.placeholder.com/150" alt="Kiryzz Store Logo" id="payment-logo">
+            <h1>Kiryzz Store</h1>
+            <p>Complete your payment</p>
+        </div>
+
+        <div class="payment-options">
+            <div class="payment-method active" data-method="dana">
+                <img src="https://files.catbox.moe/9ozprx.jpg" alt="DANA">
+            </div>
+            <div class="payment-method" data-method="ovo">
+                <img src="https://files.catbox.moe/l8dejq.jpg" alt="OVO">
+            </div>
+            <div class="payment-method" data-method="gopay">
+                <img src="https://files.catbox.moe/gmhlud.jpg" alt="GoPay">
+            </div>
+            <div class="payment-method" data-method="qris">
+                <img src="https://files.catbox.moe/i23ksd.jpeg" alt="QRIS">
+            </div>
+        </div>
+
+        <div class="payment-details">
+            <div class="method-info" id="dana-info">
+                <h3>Payment via DANA</h3>
+                <div class="payment-number">081234567890</div>
+                <p>Send payment to this DANA number</p>
+            </div>
+
+            <div class="method-info" id="ovo-info" style="display: none;">
+                <h3>Payment via OVO</h3>
+                <div class="payment-number">081234567890</div>
+                <p>Send payment to this OVO number</p>
+            </div>
+
+            <div class="method-info" id="gopay-info" style="display: none;">
+                <h3>Payment via GoPay</h3>
+                <div class="payment-number">081234567890</div>
+                <p>Send payment to this GoPay number</p>
+            </div>
+
+            <div class="method-info" id="qris-info" style="display: none;">
+                <h3>Payment via QRIS</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://kiryzzstore.com/payment" alt="QRIS Code" class="qris-code">
+                <p>Scan this QR code to pay</p>
+            </div>
+        </div>
+
+        <button class="confirm-button" id="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
+        </button>
+
+        <audio id="bg-music" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="music-control">
+            <button id="music-toggle">
+                <i class="fas fa-music"></i> <span>Play Music</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
