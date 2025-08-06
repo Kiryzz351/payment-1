@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiryzz Store - Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <!-- Loading Animation -->
+        <div class="loading-container" id="loading">
+            <div class="logo">
+                <h1 class="neon-text">KIRYZZ STORE</h1>
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+                <p class="loading-text">Processing your payment...</p>
+            </div>
+        </div>
+
+        <!-- Main Content (hidden during loading) -->
+        <div class="main-content" id="mainContent">
+            <div class="header">
+                <img src="https://via.placeholder.com/150x50/1a1a2e/00f7ff?text=KIRYZZ+STORE" alt="Kiryzz Store Logo" class="store-logo">
+                <h1 class="neon-text">PAYMENT GATEWAY</h1>
+            </div>
+
+            <div class="payment-options">
+                <h2 class="neon-text">Select Payment Method</h2>
+                
+                <div class="payment-methods">
+                    <div class="method" onclick="selectPayment('dana')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_DANA.svg" alt="DANA">
+                        <span>DANA</span>
+                    </div>
+                    <div class="method" onclick="selectPayment('ovo')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Logo_ovo.svg" alt="OVO">
+                        <span>OVO</span>
+                    </div>
+                    <div class="method" onclick="selectPayment('gopay')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" alt="GoPay">
+                        <span>GoPay</span>
+                    </div>
+                    <div class="method" onclick="selectPayment('qris')">
+                        <img src="https://qris.id/wp-content/uploads/2021/07/QRIS-Logo-Horizontal-01-1.png" alt="QRIS">
+                        <span>QRIS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-details" id="paymentDetails">
+                <div class="details-container">
+                    <h3 class="neon-text">Payment Instructions</h3>
+                    <div id="danaDetails" class="method-details">
+                        <p>Send payment to DANA number:</p>
+                        <div class="account-number neon-box">081234567890</div>
+                        <p>Then confirm via WhatsApp:</p>
+                        <a href="https://wa.me/6281234567890?text=Halo%20Kiryzz%20Store,%20saya%20sudah%20transfer%20via%20DANA" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div id="ovoDetails" class="method-details" style="display:none;">
+                        <p>Send payment to OVO number:</p>
+                        <div class="account-number neon-box">081234567890</div>
+                        <p>Then confirm via WhatsApp:</p>
+                        <a href="https://wa.me/6281234567890?text=Halo%20Kiryzz%20Store,%20saya%20sudah%20transfer%20via%20OVO" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div id="gopayDetails" class="method-details" style="display:none;">
+                        <p>Send payment to GoPay number:</p>
+                        <div class="account-number neon-box">081234567890</div>
+                        <p>Then confirm via WhatsApp:</p>
+                        <a href="https://wa.me/6281234567890?text=Halo%20Kiryzz%20Store,%20saya%20sudah%20transfer%20via%20GoPay" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div id="qrisDetails" class="method-details" style="display:none;">
+                        <p>Scan this QRIS code:</p>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/6281234567890?text=Halo%20Kiryzz%20Store,%20saya%20sudah%20transfer%20via%20QRIS" alt="QRIS Code" class="qris-code">
+                        <p>Then confirm via WhatsApp:</p>
+                        <a href="https://wa.me/6281234567890?text=Halo%20Kiryzz%20Store,%20saya%20sudah%20transfer%20via%20QRIS" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
